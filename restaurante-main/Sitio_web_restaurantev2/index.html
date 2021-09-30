@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Italian Food</title>
+  <title>Menú</title>
   <meta name="viewport"
     content="width=device-width,user-scalable=yes, initial-scale=1.0,maximun-scale=3.0,minimun-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
@@ -14,17 +14,37 @@
     crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/nosotros.css">
+  <link rel="stylesheet" href="css/galeria.css">
   <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })
+  </script>
 
 </head>
 
 <body>
+  <div class="modal" id="modal">
+    <div class="modal__content">
+      <img src="img/resta.jpg" alt="" class="modal__img" id="modal__img">
+    </div>
+    <div class="modal__boton" id="modal__boton">X</div>
+  </div>
   <header class="main-header">
     <div class="container--flex">
       <div class="logo-container column column--50">
-        <h1 class="logo">Italian Food</h1>
+        <h1 class="logo" style="padding-left: 30px; ">Italian food</h1>
       </div>
       <div class="main-header__contactInfo column column--50">
         <p class="main-header__contactInfo__phone">
@@ -46,6 +66,7 @@
           <li class="menu__item"><a href="menu.html" class="menu__link ">Menu</a></li>
           <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
 
+
           <li class="menu__item"><a href="servicios.html" class="menu__link">Servicios</a></li>
           <li class="menu__item"><a href="mapadesitio.html" class="menu__link">Ubicacion</a></li>
 
@@ -64,11 +85,6 @@
         </div>
     </div>
   </nav>
-  <!-- <section class="banner">
-       <img src="img/bar2.jpg" alt="" class="banner__img">
-       <div class="banner__content">La mejor experiencia en pastas esta aqui</div>
-   </section> -->
-
   <section class="banner">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -102,102 +118,160 @@
       </button>
     </div>
   </section>
+  <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel"
+    aria-labelledby="pills-profile-tab">
 
-
-  <main class="main">
-    <section class="group group--color">
-      <div class="container">
-        <h2 class="main__title">Bienvenido Italian Food</h2>
-        <p class="main__txt">Italian Food considerado por muchos el mejor restaurante de comida italiana de la ciudad,
-          te invitamos a vivir la experiencia en nuestras instalaciones tematizadas en la bella itaila donde podras
-          degustar tu paladar con los mejores y mas exclusivos platos italianos que puedas encontrar</p>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel">
+        <p>hola</p>
       </div>
-    </section>
-    <section>
-      <h2 class="group--title">Nuestros eventos</h2>
-      <div class="card-group">
-        <div class="card">
-          <img src="img/cena_romantica.jpeg" class="card-img-top" alt="..." height="288">
-          <div class="card-body">
-            <h5 class="card-title">Cena romantica</h5>
-            <p class="card-text">Ven con tu pareja a pasar una velada romantica acompañada de una mesa con
-              champaña,velas y decoracion incluida</p>
+    </div>
 
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/orquesta.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Show musical</h5>
-            <p class="card-text">Vive con nosotros nuestro Jueves musical, una de las mejores experiencias, donde
-              tenemos el honor de presentar una de las mejores orquestas musicales de la capital.</p>
+    <div class="tab-content" id="pills-tabContent">
 
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/cumpleaños.jpg" class="card-img-top" alt="..." height="288">
-          <div class="card-body">
-            <h5 class="card-title">Cumpleaños</h5>
-            <p class="card-text">Celebra con nosotros tus cumpleaños! donde te traeremos un pastel decorado y cantaremos
-              tu cumpleaños acompañado de tus seres queridos.</p>
-          </div>
-        </div>
+
+
+
+
+      <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        Producto Añadido al carrito!
       </div>
-    </section>
-
-    <section class="group today-special">
-      <h2 class="group--title">Especiales del dia </h2>
-      <div class="container container--flex">
-        <div class="column column--50-25">
-          <img src="img/pasta.jpg" alt="" class="today-special__img">
-          <div class="today-special__title">Pasta a la Boloñesa</div>
-          <div class="today-special__price">$15900</div>
-        </div>
-        <div class="column column--50-25">
-          <img src="img/raviolis.jpg" alt="" class="today-special__img">
-          <div class="today-special__title">Ravioles de Ricota</div>
-          <div class="today-special__price">$12900</div>
-        </div>
-        <div class="column column--50-25">
-          <img src="img/lasagna.jpg" alt="" class="today-special__img">
-          <div class="today-special__title">Lasagna </div>
-          <div class="today-special__price">$19900</div>
-        </div>
-        <div class="column column--50-25">
-          <img src="img/pizza.jpg" alt="" class="today-special__img">
-          <div class="today-special__title">Pizza napolitana</div>
-          <div class="today-special__price">$9900</div>
-        </div>
-        <a href="menu.html" class="btn btn--contact">Ver menu </a>
+      <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+        Producto removido!
       </div>
-    </section>
-    <section>
-      <h2 class="group--title">Testimonios</h2>
-      <div class="group our-team">
 
-        <div class="row">
-
-          <div class="col-lg-4">
-            <img src="img/maria.jpg" alt="Maria" class="our-team__img">
-            <h2>Maria</h2>
-            <p>Es un lugar perfecto para compartir en familia ocasiones especiales. </p>
+      <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        1
+      </div>
+      <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel">
+        <section class="group group--color">
+          <div class="container">
+            <h2 class="main__title">Bienvenido Italian Food</h2>
+            <p class="main__txt">Italian Food considerado por muchos el mejor restaurante de comida italiana de la
+              ciudad,
+              te invitamos a vivir la experiencia en nuestras instalaciones tematizadas en la bella itaila donde
+              podras
+              degustar tu paladar con los mejores y mas exclusivos platos italianos que puedas encontrar</p>
           </div>
+        </section>
+        <section>
+          <h2 class="group--title">Nuestros eventos</h2>
+          <div class="card-group">
+            <div class="card">
+              <img src="img/cena_romantica.jpeg" class="card-img-top" alt="..." height="288">
+              <div class="card-body">
+                <h5 class="card-title">Cena romantica</h5>
+                <p class="card-text">Ven con tu pareja a pasar una velada romantica acompañada de una mesa con
+                  champaña,velas y decoracion incluida</p>
 
-          <div class="col-lg-4">
-            <img src="img/lucas.jpg" alt="Lucas" class="our-team__img">
-            <h2>Lucas</h2>
-            <p>Los platos que brindan son realmentes deliciosos y la atencion es de las mejores de la ciudad.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/orquesta.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Show musical</h5>
+                <p class="card-text">Vive con nosotros nuestro Jueves musical, una de las mejores experiencias, donde
+                  tenemos el honor de presentar una de las mejores orquestas musicales de la capital.</p>
+
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/cumpleaños.jpg" class="card-img-top" alt="..." height="288">
+              <div class="card-body">
+                <h5 class="card-title">Cumpleaños</h5>
+                <p class="card-text">Celebra con nosotros tus cumpleaños! donde te traeremos un pastel decorado y
+                  cantaremos
+                  tu cumpleaños acompañado de tus seres queridos.</p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div class="col-lg-4">
-            <img src="img/magdalena.jpg" alt="Magdalena" class="our-team__img">
-            <h2>Magdalena</h2>
-            <p>Es un restaurante con un concepto muy original y con una comida realmente fantastica.</p>
+        <section class="group today-special">
+          <h2 class="group--title">Especiales del dia </h2>
+          <div class="container container--flex">
+            <div class="column column--50-25">
+              <img src="img/pasta.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Pasta a la Boloñesa</div>
+              <div class="today-special__price">$15900</div>
+            </div>
+            <div class="column column--50-25">
+              <img src="img/raviolis.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Ravioles de Ricota</div>
+              <div class="today-special__price">$12900</div>
+            </div>
+            <div class="column column--50-25">
+              <img src="img/lasagna.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Lasagna </div>
+              <div class="today-special__price">$19900</div>
+            </div>
+            <div class="column column--50-25">
+              <img src="img/pizza.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Pizza napolitana</div>
+              <div class="today-special__price">$9900</div>
+            </div>
+            <a href="menu.html" class="btn btn--contact">Ver menu </a>
+          </div>
+        </section>
+        <section>
+          <h2 class="group--title">Testimonios</h2>
+          <div class="group our-team">
+
+            <div class="row">
+
+              <div class="col-lg-4">
+                <img src="img/maria.jpg" alt="Maria" class="our-team__img">
+                <h2>Maria</h2>
+                <p>Es un lugar perfecto para compartir en familia ocasiones especiales. </p>
+              </div>
+
+              <div class="col-lg-4">
+                <img src="img/lucas.jpg" alt="Lucas" class="our-team__img">
+                <h2>Lucas</h2>
+                <p>Los platos que brindan son realmentes deliciosos y la atencion es de las mejores de la ciudad.</p>
+              </div>
+
+              <div class="col-lg-4">
+                <img src="img/magdalena.jpg" alt="Magdalena" class="our-team__img">
+                <h2>Magdalena</h2>
+                <p>Es un restaurante con un concepto muy original y con una comida realmente fantastica.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <br>
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr class="text-primary">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+
+
+
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4 d-flex">
+          <div class="col d-flex align-items-center" style="margin: none">
+            <h2 class="itemCartTotal text-black">Total: 0</h2>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="btn btn-success">COMPRAR</button>
           </div>
         </div>
+
       </div>
-    </section>
-  </main>
+
+    </div>
+  </div>
 
   <footer class="bg-dark text-center text-white">
     <div class="container p-4">
@@ -238,8 +312,26 @@
       © 2021 Copyright
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/CarritoDeCompra.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
     integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
     crossorigin="anonymous"></script>

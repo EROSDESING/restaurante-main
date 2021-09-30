@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Menú</title>
+  <title>Italian Food</title>
   <meta name="viewport"
     content="width=device-width,user-scalable=yes, initial-scale=1.0,maximun-scale=3.0,minimun-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
@@ -14,23 +14,10 @@
     crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/galeria.css">
+  <link rel="stylesheet" href="css/nosotros.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script>
-    var myModal = document.getElementById('myModal')
-    var myInput = document.getElementById('myInput')
-    myModal.addEventListener('shown.bs.modal', function () {
-      myInput.focus()
-    })
-  </script>
 
 </head>
 
@@ -86,13 +73,46 @@
     </div>
   </nav>
   <section class="banner">
-    <img src="img/restauantee.jpg" alt="" class="banner__img">
-    <div class="banner__content">Lo mejor de nosotros a tu servicio</div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/promocion_3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/promocion_4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/promocion_6.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </section>
   <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel"
     aria-labelledby="pills-profile-tab">
 
-
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel">
+        <p>hola</p>
+      </div>
+    </div>
 
     <div class="tab-content" id="pills-tabContent">
 
@@ -111,82 +131,101 @@
         1
       </div>
       <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel">
-        <main class="main">
-          <section class="group group--color">
-            <div class="container">
-              <h2 class="main__title">Sobre Nosotros</h2>
-              <p class="main__txt">Somos un restaurante de comida italiana con mas de 20 años de experiencia y
-                trayectoria en
-                el mercado, brindando nuestros clintes un optimo servicio y atencion </p>
-            </div>
-          </section>
-          <section class="group our-team">
-            <h2 style="font-family: 'Pacifico', cursive;" class="group__title  ">Nuestro equipo</h2>
-            <div class="container container--flex">
-              <div class="column column--33">
-                <h3 class="our-team__title">Raul</h3>
-                <img src="img/chef.jpg" alt="" class="our-team__img">
-                <p class="our-team__txt">Raul es de nuestros mejores cocineros con experiencia en comida italiana,que
-                  estara a
-                  su dispocicion para preparar los mejores platos</p>
-              </div>
-              <div class="column column--33">
-                <h3 class="our-team__title">Andrea</h3>
-                <img src="img/admin.jpg" alt="" class="our-team__img">
-                <p class="our-team__txt">Andrea es nuestra administradora que esta al pendiente de que el trabajo en
-                  equipo
-                  sea continuo y optimo para seguir mejorando cada dia mas nuestro servicio a nuestros clientes.</p>
-              </div>
-              <div class="column column--33">
-                <h3 class="our-team__title">Ana</h3>
-                <img src="img/mesera.jpg" alt="" class="our-team__img">
-                <p class="our-team__txt">Ana es una de nuestras mejores y mas destacadas meseras por su actitud de
-                  servicio y
-                  eficiencia.</p>
+        <section class="group group--color">
+          <div class="container">
+            <h2 class="main__title">Bienvenido Italian Food</h2>
+            <p class="main__txt">Italian Food considerado por muchos el mejor restaurante de comida italiana de la
+              ciudad,
+              te invitamos a vivir la experiencia en nuestras instalaciones tematizadas en la bella itaila donde
+              podras
+              degustar tu paladar con los mejores y mas exclusivos platos italianos que puedas encontrar</p>
+          </div>
+        </section>
+        <section>
+          <h2 class="group--title">Nuestros eventos</h2>
+          <div class="card-group">
+            <div class="card">
+              <img src="img/cena_romantica.jpeg" class="card-img-top" alt="..." height="288">
+              <div class="card-body">
+                <h5 class="card-title">Cena romantica</h5>
+                <p class="card-text">Ven con tu pareja a pasar una velada romantica acompañada de una mesa con
+                  champaña,velas y decoracion incluida</p>
+
               </div>
             </div>
+            <div class="card">
+              <img src="img/orquesta.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Show musical</h5>
+                <p class="card-text">Vive con nosotros nuestro Jueves musical, una de las mejores experiencias, donde
+                  tenemos el honor de presentar una de las mejores orquestas musicales de la capital.</p>
 
-          </section>
-          <section>
-            <h2 class="group--title">Testimonios</h2>
-
-            <div class="wrapper">
-              <div class="slider-testimonial">
-                <div class="testimonial-item">
-                  <div class="testimonial-client" align="center">
-                    <img src="img/lucas.jpg" alt="" class="our-team__img">
-                    <p class="client-name">Carlos Gomez</p>
-                  </div>
-                  <div class="testimonial-text" align="center">
-                    <p>Los platos que brindan son realmentes deliciosos y la atencion es de las mejores de la ciudad.
-                    </p>
-                  </div>
-                </div>
-                <div class="testimonial-item">
-                  <div class="testimonial-client" align="center">
-                    <img src="img/magdalena.jpg" alt="" class="our-team__img">
-                    <p class="client-name">Fernanda Castro</p>
-                  </div>
-                  <div class="testimonial-text" align="center">
-                    <p>Es un restaurante con un concepto muy original y con una comida realmente fantastica.</p>
-                  </div>
-                </div>
-                <div class="testimonial-item">
-                  <div class="testimonial-client" align="center">
-                    <img src="img/maria.jpg" alt="" class="our-team__img" text>
-                    <p class="client-name">Adriana Fernandez</p>
-                  </div>
-                  <div class="testimonial-text" align="center">
-                    <p>Es un lugar perfecto para compartir en familia ocasiones especiales. .</p>
-                  </div>
-                </div>
               </div>
             </div>
-          </section>
+            <div class="card">
+              <img src="img/cumpleaños.jpg" class="card-img-top" alt="..." height="288">
+              <div class="card-body">
+                <h5 class="card-title">Cumpleaños</h5>
+                <p class="card-text">Celebra con nosotros tus cumpleaños! donde te traeremos un pastel decorado y
+                  cantaremos
+                  tu cumpleaños acompañado de tus seres queridos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <section class="group today-special">
+          <h2 class="group--title">Especiales del dia </h2>
+          <div class="container container--flex">
+            <div class="column column--50-25">
+              <img src="img/pasta.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Pasta a la Boloñesa</div>
+              <div class="today-special__price">$15900</div>
+            </div>
+            <div class="column column--50-25">
+              <img src="img/raviolis.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Ravioles de Ricota</div>
+              <div class="today-special__price">$12900</div>
+            </div>
+            <div class="column column--50-25">
+              <img src="img/lasagna.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Lasagna </div>
+              <div class="today-special__price">$19900</div>
+            </div>
+            <div class="column column--50-25">
+              <img src="img/pizza.jpg" alt="" class="today-special__img">
+              <div class="today-special__title">Pizza napolitana</div>
+              <div class="today-special__price">$9900</div>
+            </div>
+            <a href="menu.html" class="btn btn--contact">Ver menu </a>
+          </div>
+        </section>
+        <section>
+          <h2 class="group--title">Testimonios</h2>
+          <div class="group our-team">
 
+            <div class="row">
 
-        </main>
+              <div class="col-lg-4">
+                <img src="img/maria.jpg" alt="Maria" class="our-team__img">
+                <h2>Maria</h2>
+                <p>Es un lugar perfecto para compartir en familia ocasiones especiales. </p>
+              </div>
+
+              <div class="col-lg-4">
+                <img src="img/lucas.jpg" alt="Lucas" class="our-team__img">
+                <h2>Lucas</h2>
+                <p>Los platos que brindan son realmentes deliciosos y la atencion es de las mejores de la ciudad.</p>
+              </div>
+
+              <div class="col-lg-4">
+                <img src="img/magdalena.jpg" alt="Magdalena" class="our-team__img">
+                <h2>Magdalena</h2>
+                <p>Es un restaurante con un concepto muy original y con una comida realmente fantastica.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">

@@ -3,24 +3,48 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Contacto</title>
+  <title>Menú</title>
   <meta name="viewport"
     content="width=device-width,user-scalable=yes, initial-scale=1.0,maximun-scale=3.0,minimun-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/galeria.css">
   <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })
+  </script>
 
 </head>
 
 <body>
-
+  <div class="modal" id="modal">
+    <div class="modal__content">
+      <img src="img/resta.jpg" alt="" class="modal__img" id="modal__img">
+    </div>
+    <div class="modal__boton" id="modal__boton">X</div>
+  </div>
   <header class="main-header">
     <div class="container--flex">
       <div class="logo-container column column--50">
-        <h1 class="logo">Italian food</h1>
+        <h1 class="logo" style="padding-left: 30px; ">Italian food</h1>
       </div>
       <div class="main-header__contactInfo column column--50">
         <p class="main-header__contactInfo__phone">
@@ -41,6 +65,7 @@
           <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
           <li class="menu__item"><a href="menu.html" class="menu__link ">Menu</a></li>
           <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
+
 
           <li class="menu__item"><a href="servicios.html" class="menu__link">Servicios</a></li>
           <li class="menu__item"><a href="mapadesitio.html" class="menu__link">Ubicacion</a></li>
@@ -64,98 +89,159 @@
     <img src="img/contacto.jpg" alt="" class="banner__img">
     <div class="banner__content">Dejanos tu mensaje </div>
   </section>
-
-  <main class="main">
-    <section class="group contact">
-      <h2 class="group__title">Contáctenos</h2><br><br><br>
-      <div class="container container--flex">
-        <div class="contact-information column column--50">
-          <h3 class="column__title">Informacion de contacto</h3>
-          <p class="column_txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur suscipit, itaque quas
-            minima illo dignissimos iure. Quidem adipisci maiores pos</p>
-          <p class="column_txt"><span class="icon-phone"></span> Teléfono 2: 8888888888</p>
-          <p class="column_txt"><span class="icon-phone"></span> Teléfono 1: 9999999999</p>
-          <p class="column_txt"><span class="icon-location"></span> Carrera 153 #67-87 Bogota,Colombia</p>
-          <p class="column_txt"><span class="icon-mail"></span> mesaybar@yourbar.com</p>
-          <div class="social-icon">
-            <a href="" class="social-icon__link"><span class="icon-whatsapp"></span></a>
-            <a href="" class="social-icon__link"><span class="icon-facebook-square"></span></a>
-            <a href="" class="social-icon__link"><span class="icon-instagram"></span></a>
-          </div>
-        </div>
-
-        <form action="" method="post" class="formulario column column--50">
-          <div class="row mb-2">
-
-            <div class="col">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstname" placeholder="Nombre" required
-                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
-            </div>
-            <div class="col">
-              <label class="form-label">Asunto</label>
-              <input type="text" class="form-control" id="firstname" placeholder="Asunto" required
-                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
-            </div>
-
-          </div>
-          <div class="row mb-2">
-            <div class="col">
-              <label class="form-label">Correo Electronico</label>
-              <input type="email" class="form-control" id="email" placeholder="Correo" required
-                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})">
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <label for="tel">Servicios: </label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Servicios</option>
-                  <option value="1">Celebración de cumpleaños s</option>
-                  <option value="2">Aniversarios</option>
-                  <option value="3">Fiestas infantiles
-                  </option>
-                  <option value="3">Declaraciones o propuestas
-                  </option>
-                  <option value="3">Despedidas</option>
-                  <option value="3"> Cena con amigos</option>
-                </select>
-              </div>
+  <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel"
+    aria-labelledby="pills-profile-tab">
 
 
-            </div>
-            <div class="row mb-2">
 
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <label class="form-label">Mensage</label>
-                <textarea type="text" name="mensage" class="form-control" placeholder="Mensage" aria-label="Message"
-                  required></textarea>
-              </div>
+    <div class="tab-content" id="pills-tabContent">
 
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Aceptar tratamiento de datos personales
-                  </label>
+
+
+
+
+      <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        Producto Añadido al carrito!
+      </div>
+      <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+        Producto removido!
+      </div>
+
+      <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        1
+      </div>
+      <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel">
+        <main class="main">
+          <section class="group contact">
+            <h2 class="group__title">Contáctenos</h2><br><br><br>
+            <div class="container container--flex">
+              <div class="contact-information column column--50">
+                <h3 class="column__title">Informacion de contacto</h3>
+                <p class="column_txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur suscipit,
+                  itaque quas
+                  minima illo dignissimos iure. Quidem adipisci maiores pos</p>
+                <p class="column_txt"><span class="icon-phone"></span> Teléfono 2: 8888888888</p>
+                <p class="column_txt"><span class="icon-phone"></span> Teléfono 1: 9999999999</p>
+                <p class="column_txt"><span class="icon-location"></span> Carrera 153 #67-87 Bogota,Colombia</p>
+                <p class="column_txt"><span class="icon-mail"></span> mesaybar@yourbar.com</p>
+                <div class="social-icon">
+                  <a href="" class="social-icon__link"><span class="icon-whatsapp"></span></a>
+                  <a href="" class="social-icon__link"><span class="icon-facebook-square"></span></a>
+                  <a href="" class="social-icon__link"><span class="icon-instagram"></span></a>
                 </div>
               </div>
 
+              <form action="" method="post" class="formulario column column--50">
+                <div class="row mb-2">
+
+                  <div class="col">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Nombre" required
+                      pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Asunto" required
+                      pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                  </div>
+
+                </div>
+                <div class="row mb-2">
+                  <div class="col">
+                    <label class="form-label">Correo Electronico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Correo" required
+                      pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})">
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col">
+                      <label for="tel">Servicios: </label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Servicios</option>
+                        <option value="1">Celebración de cumpleaños s</option>
+                        <option value="2">Aniversarios</option>
+                        <option value="3">Fiestas infantiles
+                        </option>
+                        <option value="3">Declaraciones o propuestas
+                        </option>
+                        <option value="3">Despedidas</option>
+                        <option value="3"> Cena con amigos</option>
+                      </select>
+                    </div>
+
+
+                  </div>
+                  <div class="row mb-2">
+
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col">
+                      <label class="form-label">Mensage</label>
+                      <textarea type="text" name="mensage" class="form-control" placeholder="Mensage"
+                        aria-label="Message" required></textarea>
+                    </div>
+
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Aceptar tratamiento de datos personales
+                        </label>
+                      </div>
+                    </div>
+
+                  </div>
+                  <br>
+
+
+
+
+                  <button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Enviar</button>
+
+              </form>
+
             </div>
-            <br>
 
+          </section>
 
-
-
-            <button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Enviar</button>
-
-        </form>
+        </main>
       </div>
-    </section>
-  </main>
+
+      <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <br>
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr class="text-primary">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+
+
+
+          </tbody>
+
+
+        </table>
+        <div class="row mx-4 d-flex">
+          <div class="col d-flex align-items-center" style="margin: none">
+            <h2 class="itemCartTotal text-black">Total: 0</h2>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="btn btn-success">COMPRAR</button>
+          </div>
+        </div>
+        <br><br>
+
+
+      </div>
+
+    </div>
+  </div>
 
   <footer class="bg-dark text-center text-white">
     <div class="container p-4">
@@ -164,16 +250,16 @@
           <h5 class="text-uppercase">Mapa del sitio</h5>
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">Restaurante Italianfood ltda</a>
+              <a href="#!" class="text-white" style="text-decoration:none">Restaurante Italianfood ltda</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Carrera 156 #135-24 Bogota,Colombia</a>
+              <a href="#!" class="text-white" style="text-decoration:none">Carrera 156 #135-24 Bogota,Colombia</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Italianfood@contact.com</a>
+              <a href="#!" class="text-white" style="text-decoration:none">Italianfood@contact.com</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Teléfono: 6893457</a>
+              <a href="#!" class="text-white" style="text-decoration:none">Teléfono: 6893457</a>
             </li>
           </ul>
         </div>
@@ -196,8 +282,26 @@
       © 2021 Copyright
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/CarritoDeCompra.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
     integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
     crossorigin="anonymous"></script>
